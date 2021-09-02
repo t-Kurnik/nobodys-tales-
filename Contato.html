@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>Nobody's tales</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="contato.css" type="text/css" media="screen">
+	</head>
+ 
+<body>
+	<div class="main">
+		<div class="titulo_principal">
+			<h1>Nobody's tales</h1>
+		</div>
+		
+		<div class="menu">
+			<ul>
+				<li><a href="index.html">Início</a></li>
+				<li><a href="Contos.html">Contos</a></li>
+				<li><a href="Quiz.html">Quiz</a></li>
+				<li><a href="Contato.html">Contato</a></li>
+			</ul>
+		</div>
+	
+		<div class="content">
+		<div class="content-inner">
+		
+		<header>
+			<!-- cabeçalho do article-->
+			<h3 class="inst">Digite seus dados e sua mensagem para que possamos entrar em contato:</h3>
+			<!-- inst=instruções-->
+		</header>
+		
+		<form name="f_aula" method="post" action="">
+				
+			<div class="form_esq">
+				<fieldset>
+				<legend>Seus dados</legend>
+				<ul>
+					<li><a><label><strong>Nome:&nbsp</strong> </label>
+					<input type="text" name="f_name" size="auto" maxlength="30"  autofocus required></a></li>
+									
+					<li><a><label><strong>E-mail:&nbsp</strong></label>
+					<input type="text" name="f_email" size="auto" maxlength="30" required></a></li>
+				
+					<li><a><label><strong>Endereço:&nbsp</strong></label>
+					<input type="text" name="f_end" size="37" maxlength="35" required></a></li>
+				
+					<li><a><label><strong>Nº.:</strong></label>
+					<input type="text" name="f_num" size="20" maxlength="10" required></a></li>
+				
+					<li><a><label><strong>Complemento:&nbsp</strong></label>
+					<input type="text" name="f_num" size="25" maxlength="10" required></a></li>
+
+					<li><a><label><strong>Bairro:</strong></label>
+					<input type="text" name="f_bairro" size="25" maxlength="20" required></a></li>
+				
+					<li><a><label><strong>Cidade:</strong></label>
+					<input type="text" name="f_cidade" size="25" maxlength="20" required></a></li>
+
+					<li><a><label><strong>CEP:</strong></label>
+					<input type="text" name="f_cep" size="15" maxlength="09" placeholder="XXXXX-XXX" pattern="\d{5}-?\d{3}" required></a></li>
+				
+					<li><a><label><strong>Tel.:</strong></label>
+					<input type="text" name="f_fone" size="20" maxlength="15" placeholder="(XX) XXXX-XXXX" required></a></li> 
+
+					<li><a><label><strong>Cel.:</strong></label>
+					<input type="text" name="f_cel" size="20" maxlength="12" placeholder="(XX) X XXXX-XXXX" required></a></li>
+				
+					<li><a><label><strong>Profissão:</strong> </label>
+					<input type="text" name="f_name" size="30" maxlength="15"  autofocus required></a></li>
+				</ul>
+				</fieldset>
+			</div>
+						
+			<div class="form_dir"> 
+				<fieldset>
+				<legend>Mensagem</legend>
+				
+				<select name="Assunto">
+					<option value="E/R" selected="selected">Elogios / Reclamações</option>		
+					<option value="Serviços">Serviços</option>
+					<option value="Currículo">Trabalhe Conosco</option>
+					<option value="Outros">Outros</option>
+                </select>
+						
+				<div>
+					<textarea name="mensagem" rows="17" cols="50" placeholder="Digite a sua mensagem aqui." required></textarea>
+				</div>
+				
+				<div class="botao">				
+					<input type="submit" value="Enviar">
+					<input type="Reset" value="Limpar">
+				</div>
+				</fieldset>
+			</div>
+			
+		</form>
+	</div>
+	</div>
+	
+	<div class="sidebar">
+	<h4 class="inf_site">Informações do site:</h4>
+		<div class="inf_site2">
+			<p><strong class="cor_item">Data de criação:</strong></br> 10 de Outubro de 2019.</p>
+			<p><strong class="cor_item">Disciplina:</strong></br> Fundamentos da WEB.</p>
+			<p><strong class="cor_item">Instituição:</strong></br> Mackenzie - SP.</p>
+			<p><strong class="cor_item">E-mail de contato:</strong></br>nobodys.tales@gmail.com</p>
+		</div>
+		<img src="corvo.jpg">
+	</div>
+
+	<br style="clear:both">
+ 
+	<div class="footer">
+	
+		<script>
+		function alterarCont(){
+		document.getElementById('nome').innerHTML = ('<strong>Site desenvolvido por: Taís Roberta Domingues Kurnik<strong>');
+		}
+		</script> 
+		
+		<div>
+			<p id="nome"><strong>Testando o Javascript</strong></p>
+			<button type="button" onclick="alterarCont()"> Click aqui.</button>
+		</div>
+		
+	</div>
+	
+ </div>
+ </body>
+</html>

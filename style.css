@@ -1,0 +1,161 @@
+ body, html{
+ margin:0;
+ padding:0;
+ background: url('papel-parede.jpg'); 
+ }
+ 
+ h4{
+	text-align: right;
+ }
+ 
+ .main{
+ max-width:1200px;
+ margin:0 auto;
+ overflow:hidden;
+ background:lightgray;
+ text-align: center;
+ opacity: 0.80;
+}
+
+ .content{
+ float:left;
+ width:100%;
+ margin-right:-210px;
+}
+ 
+ .content-inner{
+ margin-right:230px;
+ margin-left: 40px;
+ text-align:justify;
+ }
+ 
+ .sidebar{
+ background:white;
+ padding: 5px 5px 500px 5px; 
+ float:right;
+ width:200px;
+ list-style:none;
+ }
+ 
+ .menu{
+ width:100%;
+ background:black;
+ background-color: black;
+ word-spacing: 30px;
+}
+ 
+ .menu ul{
+ margin:0; 
+ padding:0;
+ }
+ 
+ .menu ul li{
+ display:inline-block;
+ *display:inline;
+ zoom:1;
+ margin:0; 
+ padding:0;
+ }
+ 
+ .menu ul li a{
+ text-decoration:none;
+ display:block;
+ padding:20px;
+ color:#fff;
+ font-family: Apple Chancery, cursive;  
+ }
+ 
+ .footer{
+ width:100%;
+ background:black;
+ text-align:center;
+ color: white;
+ padding: 10px 20px 10px 20px; 
+ font-family: Apple Chancery, cursive;  
+ text-decoration: overline; 
+ } 
+ 
+ .titulo_principal{
+ background: url('titulo.jpg');
+ padding: 10px 20px 10px 20px; 
+ border-radius: 0px 0px 0px 0px;
+ color: white;
+ text-align:center; 
+ font-weight: bold; 
+ font-family: Apple Chancery, cursive; 
+ letter-spacing: 15px; 
+ opacity: 0.65;
+ border-top: dotted;
+ border-bottom: dotted;
+}
+
+.titulo{
+	text-align: center;
+	word-spacing: 4px;
+	letter-spacing: 10px;
+	font-family: fantasy;
+	color: #0B4C5F;
+}	
+
+.subt{
+	text-align: center;
+	letter-spacing: 4px;
+	font-weight: bold;
+	font-family: Brush Script MT, Brush Script Std, cursive;
+}
+
+.texto1{
+	letter-spacing: 3px;
+	text-align: justify;
+	text-transform: capitalize; 
+	font-family: Brush Script MT, Brush Script Std, cursive;
+	font-weight: bold;
+	text-indent: 40px;  
+}
+
+.texto2{
+	letter-spacing: 2px;
+	text-align: justify;
+	font-family: Brush Script MT, Brush Script Std, cursive;
+	text-indent: 40px; 
+} 
+
+ .inf_site{
+ font-family: Apple Chancery, cursive;
+ text-align:center;
+
+}
+
+.inf_site2{
+ font-family: Apple Chancery, cursive;  
+ text-align:justify;
+ margin-left: 10px;
+}
+
+.cor_item{
+	color: red;
+}
+
+ img{
+ background: url('corvo.jpg');
+ height:150px; 
+ width:130px;
+}
+ 
+ @media screen and (max-width:768px) {
+ .sidebar, .content-inner, .content{
+ float: none;
+ width: 100%;
+ margin-right:0;
+ margin-left:0;
+ }
+ 
+ 
+ .texto1{
+	text-indent: 0px;  
+}
+
+.texto2{
+	text-indent: 0px; 
+} 
+ }

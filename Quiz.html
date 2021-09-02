@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>Nobody's tales</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="style2.css" type="text/css" media="screen">
+		
+		<script type="text/javascript">
+		
+			function verificar() {
+				var acertos = 0;
+				var erros = 0;
+
+				for (var p = 0; p < perguntas.length; p++) {
+					var resposta = document.getElementsByName('res' + p);
+
+					for (var alt = 0; alt < resposta.length; alt++) {
+						if (resposta[alt].checked && resposta[alt].value == perguntas[p][1]) {
+							acertos++;
+							document.getElementById('L' + p).style = "color: #00FF00;";
+						}
+
+						if (resposta[alt].checked && resposta[alt].value != perguntas[p][1]) {
+							erros++;
+							document.getElementById('L' + p).style = "color: #FF0000;";
+						}
+					}
+				}
+
+				document.getElementById('acertos').style = "visibility: visible;";
+
+				if (acertos == 0) {
+					document.getElementById('mensagem').innerHTML = "<strong>Infelizmente você errou todas as questões! :(</strong>";
+				}
+				else if (acertos == 1) {
+					document.getElementById('mensagem').innerHTML = "<strong>Pelo menos você acertou " + acertos + " questão. :)</strong>";
+				}
+				else if (acertos > 0 && acertos < perguntas.length) {
+					document.getElementById('mensagem').innerHTML = "<strong>Você acertou " + acertos + " questões e errou " + erros + " questões!</strong>";
+				}
+				else {
+					document.getElementById('mensagem').innerHTML = "<strong>PARABÉNS! Você acertou todas as " + acertos + " questões!</strong>";
+				}
+			
+			}
+			
+		</script>
+		
+	</head>
+ 
+<body>
+	
+	<div class="main">
+		<div class="titulo_principal">
+			<h1>Nobody's tales</h1>
+		</div>
+		
+		<div class="menu">
+			<ul>
+				<li><a href="index.html">Início</a></li>
+				<li><a href="Contos.html">Contos</a></li>
+				<li><a href="Quiz.html">Quiz</a></li>
+				<li><a href="Contato.html">Contato</a></li>
+			</ul>
+		</div>
+	
+		<div class="content">
+		<div class="content-inner">
+		
+		<article class="borda_lateral">
+			<h1 align="center"><font color="balck"><strong>QUIZZES</strong></font></h1>
+			<hr>
+			
+			<h1>Quiz - Edgar Allan Poe:</h1>
+
+			<script type="text/javascript">
+				var perguntas = [
+					["Somente nos anos que precederam sua morte, quando se encontrava em profunda melancolia, Poe adotou seu visual que hoje lhe é característico..", "V"],
+					["O crítico literário James Russel Lowell dizia que seu colega Edgar Allan Poe não era “o mais distinto, filosófico e destemido crítico que tem escrito nos Estados Unidos”, sugerindo que ele não usava “ácido, ao invés de tinta, em sua caneta”. ", "F"],
+					["No célebre conto O gato preto, o narrador maltrata impiedosamente seu animal de estimação, pois o escritor detestava animais. ", "F"],
+					["Edgar Allan Poe nasceu no seio de uma família escocesa-irlandesa, em 19 de janeiro de 1809, na cidade de Boston, no estado de Massachusetts, na região americana da Nova Inglaterra, no sudeste do país.", "F"],
+					["No dia 3 de Outubro de 1849, Poe foi encontrado nas ruas de Baltimore, com roupas que não eram as suas, em estado de delirium tremens, e levado para o Washington College Hospital, onde veio a morrer apenas quatro dias depois.", "V"],
+					["A escrita de Poe reflete suas teorias literárias, que ele apresentou em sua crítica e também em peças literárias como The Poetic Principle.", "V"],
+					["Poe e suas obras influenciaram a literatura nos Estados Unidos e ao redor do mundo, bem como em campos especializados, tais como a cosmologia e a criptografia.", "V"]
+				];
+		
+				document.write("<ol>");
+
+				for (var linha = 0; linha < perguntas.length; linha++) {
+					document.write("<li id='L" + linha + "'>" +perguntas[linha][0]+ "</li>");
+					document.write("<input type='radio' name='res" + linha + "' id='v" + linha + "' value='V' /> <label>VERDADEIRO</label> <br/>");
+					document.write("<input type='radio' name='res" + linha + "' id='f" + linha + "' value='F' /> <label>FALSO</label>");
+				}
+
+				document.write("</ol>");
+			</script>
+
+			<p align="center"><button id="enviar" onclick="verificar();">Enviar</button></p>
+
+			<div id="acertos" style="visibility: hidden;">
+			<p id="mensagem" style="font-size: 2em;"></p>
+			</div>
+			
+		</article>
+	</div>
+	</div>
+	
+	<div class="sidebar">
+		<h4 class="inf_site">Informações do site:</h4>
+		<div class="inf_site2">
+			<p><strong class="cor_item">Data de criação:</strong></br> 10 de Outubro de 2019.</p>
+			<p><strong class="cor_item">Disciplina:</strong></br> Fundamentos da WEB.</p>
+			<p><strong class="cor_item">Instituição:</strong></br> Mackenzie - SP.</p>
+			<p><strong class="cor_item">E-mail de contato:</strong></br>nobodys.tales@gmail.com</p>
+		</div>
+		<img src="corvo.jpg">
+	</div>
+
+	<br style="clear:both">
+ 
+	<div class="footer">
+		
+		<div>
+		
+			<script>
+			function alterarCont(){
+			document.getElementById('nome').innerHTML = ('<strong>Site desenvolvido por: Taís Roberta Domingues Kurnik<strong>');
+			}
+			</script> 
+		
+			<div>
+				<p id="nome"><strong>Testando o Javascript</strong></p>
+				<button type="button" onclick="alterarCont()"> Click aqui.</button>
+			</div>
+			
+		</div>
+		
+	</div>
+ </div>
+ </body>
+</html>
